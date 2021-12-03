@@ -64,12 +64,13 @@ const Input = styled.input`
 const List = styled.li`
     display: flex;
     margin: 10px;
+    margin-left: 30px;
     align-items: center;
     align-content: center;
     justify-content: center;
     list-style: none;
     border: 1px solid black;
-    width: 25%;
+    width: 250px;
     height: 38px;
     border-radius: 10px;
 
