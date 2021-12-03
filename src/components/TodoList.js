@@ -31,7 +31,7 @@ const TodoList = ({ todos, setTodos, setEditTodo}) => {
                     value={todo.title}
                     onChange={(e) => e.preventDefault()}
                     style={{
-                        textDecoration: todo.completed ? "line-through red" : ""
+                        textDecoration: todo.completed ? "line-through" : ""
                     }}
                     />
                         <button onClick={()=> handleEdit(todo)}><FontAwesomeIcon icon={faEdit} /></button>
