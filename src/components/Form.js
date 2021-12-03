@@ -36,25 +36,35 @@ const Form = ({ input, setInput, todos, setTodos, editTodo, setEditTodo }) => {
     }
 
     return (
-        <form onSubmit={formSubmit}>
+        <FormW onSubmit={formSubmit}>
             <Input
             type="text" 
-            placeholder="Enter to do..." 
+            placeholder="Enter your to do" 
             value={input}
             required
             onChange={inputChange}
             />
-            <button type="submit">
+            <Submit type="submit">
                    {editTodo ? 
                    <FontAwesomeIcon icon={faPenSquare}/> : 
                    <FontAwesomeIcon icon={faPlusSquare} />}
-            </button>
-        </form>
+            </Submit>
+        </FormW>
     )
 }
 
-const Input = styled.input`
-
+const FormW = styled.form`
+    display: flex;
+    margin-left: 35px;
 `; 
+
+const Input = styled.input `
+    word-wrap:break-word;
+ 
+`;
+
+const Submit = styled.button`
+    cursor: pointer;
+`;
 
 export default Form
