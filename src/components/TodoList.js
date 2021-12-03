@@ -25,13 +25,14 @@ const TodoList = ({ todos, setTodos, setEditTodo}) => {
         <Wrapper>
             {todos.map((todo) => (
                 <List key={todo.id}>
-                    <Checkbox onClick={()=> handleCheck(todo)} type="checkbox"/> 
+                    <Checkbox onClick={()=> handleCheck(todo)} type="checkbox"/>
                     <Input
                     type="text"
                     value={todo.title}
-                    onChange={(e) => e.preventDefault()
-                    
-                    }
+                    onChange={(e) => e.preventDefault()}
+                    style={{
+                        textDecoration: todo.completed ? "line-through red" : ""
+                    }}
                     />
                         <button onClick={()=> handleEdit(todo)}><FontAwesomeIcon icon={faEdit} /></button>
                         <button onClick={()=> handleDelete(todo)}> <FontAwesomeIcon icon={faBan} /></button>
@@ -81,6 +82,10 @@ const List = styled.li`
         align-items: center;
         align-content: center;
         cursor: pointer;
+
+        :hover {
+            background-color: #E7E9EB;
+        }
     }
     `;
  const Checkbox = styled.input`
