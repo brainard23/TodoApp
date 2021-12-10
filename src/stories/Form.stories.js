@@ -1,15 +1,15 @@
 import React from 'react'; 
-import App from '../App';
+import ToDoApp from '../components/ToDoApp/ToDoApp';
 
 export default {
      title: 'To Do App', 
-     component: 'App',
+     component: 'ToDoApp',
 };
 
-const Template = args => <App {...args} />;
+const Template = args => <ToDoApp {...args} />;
 
 
 export const Input = Template.bind({})
 Input.args = {
-     Onsubmit: Boolean,
+    Label: 'button'
 }

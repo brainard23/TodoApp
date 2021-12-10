@@ -24,6 +24,7 @@ const TodoList = ({ todos, setTodos, setEditTodo}) => {
     return (
         <Wrapper>
             {todos.map((todo) => (
+                //put this in storybook as a component
                 <List key={todo.id}>
                     <Checkbox onClick={()=> handleCheck(todo)} type="checkbox"/>
                     <Input
@@ -45,8 +46,6 @@ const TodoList = ({ todos, setTodos, setEditTodo}) => {
 
 const Wrapper = styled.div`
     margin-top: 10px;
-   
-    
 `;
 
 const Input = styled.input`
